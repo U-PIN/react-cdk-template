@@ -130,8 +130,13 @@ optional arguments:
                         The ID of Route 53 Hosted Zone
 ```
 
+### 4. Create GitHub repository
 
-### 4. Specify your GitHub repository information
+To deploy your applicatoin, you need to have a GitHub repository.  
+To do that, delete `.git` directory and push the contents to your newly created repository. 
+
+
+### 5. Specify your GitHub repository information
 
 In `lib/pipeline_stack.py`, you need to specify your repository related information.  
 By default, `lib/pipeline_stack.py` looks like this: 
@@ -166,12 +171,8 @@ class PipelineStack(Stack):
 
 In this file, replace `owner/repository` with your owner and repository name and `main` with your preferred branch name.  
 Also, it looks for GitHub Personal Access Token stored in Secrets Manager, so make sure you store it in your AWS account.  
-
-
-### 5. Create GitHub repository
-
-To deploy your applicatoin, you need to have a GitHub repository.  
-To do that, delete `.git` directory and push the contents to your newly created repository. Make sure repository and branch names match to the ones you specified in the previous steps. 
+  
+After that, you commit the change to the repository.  
 
 
 ### 6. Deploy CDK application 

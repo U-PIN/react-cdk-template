@@ -13,7 +13,7 @@ class PipelineStack(Stack):
   def __init__(self, scope: Construct, construct_id: str, **kwargs) -> None:
     super().__init__(scope, construct_id, **kwargs)
 
-    repository = "owner/repository"
+    repository = "U-PIN/react-cdk-template"
     branch = "main"
 
     pipeline = pipelines.CodePipeline(
