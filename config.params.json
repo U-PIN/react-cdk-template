@@ -1,0 +1,45 @@
+{
+  "Namespace": "/ReactCDKAppTemplate/",
+  "Parameters": [
+    {
+      "Name": "CloudFrontAliasCertArn",
+      "CLIFormat": "cloudfront-alias-cert-arn",
+      "Description": "The ARN for the ACM certificate used for CloudFront destribution"
+    },
+    {
+      "Name": "CloudFrontDomainName",
+      "CLIFormat": "cloudfront-domain-name",
+      "Description": "The domain name for CloudFront destribution"
+    },
+    {
+      "Name": "HostedZoneName",
+      "CLIFormat": "hosted-zone-name",
+      "Description": "The name of Route 53 Hosted Zone"
+    },
+    {
+      "Name": "HostedZoneId",
+      "CLIFormat": "hosted-zone-id",
+      "Description": "The ID of Route 53 Hosted Zone"
+    }
+  ],
+  "DefaultOptions": [
+    {
+      "CLIFormat": "delete",
+      "ShortCLIFormat": "d",
+      "Action": "store_true",
+      "Help": "delete all AWS SSM Parameters (after CDK stack was destroyed)"
+    },
+    {
+      "CLIFormat": "interactive",
+      "ShortCLIFormat": "i",
+      "Action": "store_true",
+      "Help": "run in interactive mode"
+    },
+    {
+      "CLIFormat": "test",
+      "ShortCLIFormat": "t",
+      "Action": "store_true",
+      "Help": "run in test mode (only creates config.cache.json, but does not store parameters to SSM Parameter Store)"
+    }
+  ]
+}
